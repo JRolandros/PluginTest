@@ -55,7 +55,7 @@ namespace PlugTest.Utilities
                         values[2] = (float)((MotionVector)a.Value).Z;
                         orienGetter.setMagnetometerParam(values);
                         
-                    //filterLowPass(orienGetter.getOrientation(), orientation, 0.98f);
+                   // filterLowPass(orienGetter.getOrientation(), orientation, 0.98f);
 
                     //for (int i = 0; i < 3; i++)
                     //    degree[i] = (float)(orientation[i] * 180 / Math.PI);
@@ -129,7 +129,7 @@ namespace PlugTest.Utilities
             return result;
         }
 
-        public double distanceMoveX(double angle)
+        public double u(double angle)
         {
             return 2 * Math.Sin(angle / 2);
         }

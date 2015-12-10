@@ -44,13 +44,14 @@ namespace PlugTest.View
                 deviceOrientation.sensorRegistration(s, a);
                 initViewModel();
 
-                x_position -= 0.5 * vm.ValueX * Math.Pow(deviceOrientation.dt, 2);
-                y_position -= 0.5 * vm.ValueY * Math.Pow(deviceOrientation.dt, 2);
+                x_position = deviceOrientation.distanceMoveX( vm.RotationX);
+                //y_position= deviceOrientation.distanceMoveX(vm.RotationY);
+                //y_position -= 0.5 * vm.ValueY * Math.Pow(deviceOrientation.dt, 2);
 
-                x_pos.Text = "X: " + x_position + " Y: " + vm.ValueX + " Z: "+vm.ValueZ;
-                bv1.Rotation = vm.Rotation;
-                bv1.RotationX = vm.RotationX;
-                bv1.RotationY = vm.RotationY;
+                // x_pos.Text = "X: " + x_position + " Y: " + vm.ValueX + " Z: "+vm.ValueZ;
+                //bv1.Rotation = vm.Rotation;
+                //bv1.RotationX = vm.RotationX;
+                //bv1.RotationY = vm.RotationY;
                 AbsoluteLayout.SetLayoutBounds(bv1, new Rectangle(x_position, y_position, 50, 50));
             };
 
